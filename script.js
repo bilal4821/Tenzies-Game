@@ -29,22 +29,10 @@ $(document).ready(function () {
       $(".button").html("<h3> Reset Game <h3>");
       document.getElementById("Message").style.display = "block";
 
-      $(".button").click(function() {
+      $(".button").click(function () {
         location.reload();
-    });
+      });
     }
-
-
-  
-    
- 
-  
-
-
-  
-  
-
-
   }
 
   $(".die1").click(function () {
@@ -161,7 +149,6 @@ $(document).ready(function () {
     if (button_status["btn1"] == false) {
       $(".num1").text(Math.floor(Math.random() * 10));
     }
-    // console.log("hi ",button_status["btn1"]);
 
     if (button_status["btn2"] == false) {
       $(".num2").text(Math.floor(Math.random() * 10));
@@ -210,4 +197,3 @@ $(".button").click(function () {
     $(".cal").text(value * 0);
   }
 });
-
