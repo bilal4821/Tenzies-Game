@@ -47,17 +47,28 @@ $(document).ready(function () {
     ) {
       console.log("helo billa");
       $(".button").html("<h3> Reset Game <h3>");
-      document.getElementById("Message").style.display = "block";
+      // document.getElementById("Message").style.display = "block";
       myStop();
-      
-    
+      // $(".total-dies").html("You Won");
+      // $(".total-dies").css("text-align" , "center");
+      // $(".total-dies").html("<h1 style=\"text-align: center; color: whitesmoke; display: none\">YOU <img height=\"63px\" width=\"63px\" src=\"trophy.png\" alt=\"pic\" /> WON</h1>");
 
+      $(".total-dies").html('<img style="height:53px" id="img" src="trophy.png"/>');
+      
+      $(".total-dies").css({
+        "text-align":   "center",
+        "margin-top":   "20px", 
+        "margin-left":  "275px",
+        "margin-right": "auto",
+        "font-size":    "40px", 
+        "font-weight":  "bold",
+        "color": "#1f63d1", 
+      });
+      
       $(".button").click(function () {
         location.reload();
       });
     }
-    
-  
   }
 
   $(".die1").click(function () {
