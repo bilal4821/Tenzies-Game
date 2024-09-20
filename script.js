@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  $(".num1").text(Math.floor(Math.random() * 10))
+  $(".num2").text(Math.floor(Math.random() * 10))
+  $(".num3").text(Math.floor(Math.random() * 10))
+  $(".num4").text(Math.floor(Math.random() * 10))
+  $(".num5").text(Math.floor(Math.random() * 10))
+  $(".num6").text(Math.floor(Math.random() * 10))
+  $(".num7").text(Math.floor(Math.random() * 10))
+  $(".num8").text(Math.floor(Math.random() * 10))
+  $(".num9").text(Math.floor(Math.random() * 10))
+  $(".num10").text(Math.floor(Math.random() * 10))
   let button_status = {
     btn1: false,
     btn2: false,
@@ -11,6 +21,16 @@ $(document).ready(function () {
     btn9: false,
     btn10: false,
   };
+
+  var start = new Date;
+
+   const myinterval = setInterval(function() {
+    $('.timer').text(Math.round((new Date - start) / 1000, 0) + " Seconds");
+  }, 1000);
+
+  function myStop() {
+    clearInterval(myinterval);
+  }
 
   function check_Game_Finished() {
     if (
@@ -28,11 +48,16 @@ $(document).ready(function () {
       console.log("helo billa");
       $(".button").html("<h3> Reset Game <h3>");
       document.getElementById("Message").style.display = "block";
+      myStop();
+      
+    
 
       $(".button").click(function () {
         location.reload();
       });
     }
+    
+  
   }
 
   $(".die1").click(function () {
@@ -197,3 +222,34 @@ $(".button").click(function () {
     $(".cal").text(value * 0);
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var start = new Date();
+// var intervalId = setInterval(function() {
+//   var elapsedSeconds = Math.round((new Date() - start) / 1000, 0);
+  
+//   $('.timer').text(elapsedSeconds + " Seconds");
+
+  
+//   if (elapsedSeconds >= 10) {
+//     clearInterval(intervalId); 
+//     $('.timer').text("Timer Stopped at " + elapsedSeconds + " Seconds");
+//   }
+// }, 1000);
